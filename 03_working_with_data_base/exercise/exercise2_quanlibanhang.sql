@@ -5,7 +5,9 @@ values  ("Hoàng",20),
 		("Nga",30),
 		("Hồng",21),
 		("Sang",26);
-        
+
+insert into customer(name_customer,age)
+values  ("ABCA",20);
         
 insert into `order`(id_customer,order_date)
 values  (1,'2021-12-10'),
@@ -38,3 +40,15 @@ inner join order_detail od
 on o.id_order = od.id_order
 inner join product pro
 on od.id_product = pro.id_product;
+
+select c.name_customer
+from customer c left join `order` o
+on c.id_customer = o.id_customer
+where o.id_customer is null;
+
+select o.id_order,o.order_date,sum(pro.price*od.order_qty) as total_price
+from `order` o inner join order_detail od
+on o.id_order = od.id_order
+inner join product pro
+on od.id_product = pro.id_product
+group by o.id_order;
