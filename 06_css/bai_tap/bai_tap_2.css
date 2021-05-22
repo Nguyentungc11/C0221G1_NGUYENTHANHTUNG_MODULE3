@@ -1,0 +1,13 @@
+p{
+    text-indent: 50px;
+    margin: 15px;
+}
+.mau{
+    color: darkcyan;
+}
+div{
+    border: black;
+    width: 800px;
+    height: 1000px;
+    background-color: darkgray;
+}
