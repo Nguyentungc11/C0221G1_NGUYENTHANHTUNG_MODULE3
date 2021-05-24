@@ -1,0 +1,84 @@
+body{
+    font-family: Tahoma;
+    width: 80%;
+    margin: 0px auto;
+}
+#header {
+    background-color: black;
+    height: 50px;
+    color: white;
+}
+#header ul{
+    position: relative;
+list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+#header ul li{
+    float: left;
+    display: inline-block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding: 14px 16px;
+}
+#content li{
+    list-style-type: none;
+    text-decoration: none;
+}
+#login{
+    position: absolute;
+    left: 1000px;
+}
+#content{
+    background-color: aliceblue;
+    height: 500px;
+}
+#content #left{
+    width: 16.66667%;
+    height: 100%;
+    background-color: aliceblue;
+    float: left;
+}
+#content #right{
+    width: 16.66667%;
+    height: 100%;
+    background-color: aliceblue;
+    margin-right: 0;
+    float: left;
+}
+#content #center{
+    width: 66.66667%;
+    height: 100%;
+    background-color: white;
+    float: left;
+}
+#center p{
+    font-family: Tahoma;
+    font-size: 10pt;
+}
+#a{
+    width: 99.5%;
+    height: 300px;
+    border: 1px solid black;
+    background-color: white;
+}
+#right button{
+    background-color: #CDCDCD;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 5px;
+}
+#footer {
+    background-color: darkgray;
+    height: 50px;
+    text-align: center;
+}
+
+
