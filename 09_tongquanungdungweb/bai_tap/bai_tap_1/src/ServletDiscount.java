@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 
-@WebServlet(name = "ServletDiscount",urlPatterns = "/discount")
+@WebServlet(name = "DiscountServlet",urlPatterns = "/discount")
 public class ServletDiscount extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         double price = Double.parseDouble(request.getParameter("price"));
