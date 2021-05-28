@@ -12,12 +12,12 @@
 </head>
 <body>
 <form action="/discount" method="post">
-  <label>Product Description</label>
-  <input type="text" name="desc" placeholder="description"><br>
-  <label>List Price</label>
-  <input type="text" name="price" placeholder="0"><br>
-  <label>Discount Percent</label>
-  <input type="text" name="percent" placeholder="0%"><br>
+  <p>Product Description</p>
+  <input type="text" name="desc">
+  <p>Price</p>
+  <input type="text" name="price">
+  <p>Discount Percent</p>
+  <input type="text" name="percent">
   <button type="submit" name="submit">Calculator Discount</button>
 </form>
 </body>

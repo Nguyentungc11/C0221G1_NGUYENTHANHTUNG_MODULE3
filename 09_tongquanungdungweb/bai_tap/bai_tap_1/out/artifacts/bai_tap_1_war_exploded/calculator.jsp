@@ -5,7 +5,9 @@
 </head>
 <body>
 <form>
-    <input type="text" value="<%=request.getAttribute("discountAmount")%>" disabled >
-    </form>
+    <label>
+        <input type="text" value="<%=request.getAttribute("discountAmount")%>" disabled >
+    </label>
+</form>
 </body>
 </html>
