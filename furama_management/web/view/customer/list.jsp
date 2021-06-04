@@ -10,7 +10,12 @@
 <html>
 <head>
     <title>Title</title>
-    <link rel="stylesheet" href="../../bootstrapmin/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.js"></script>
 </head>
 <body>
 <h1>Customer List</h1>
@@ -23,10 +28,10 @@
         <button class="btn btn-success" type="submit">Search</button>
     </form>
 </div>
-<table class="table">
+<table class="table" id="tableCustomer">
     <thead>
     <tr>
-        <th scope="col">Id</th>
+        <th scope="col">Code</th>
         <th scope="col">Name</th>
         <th scope="col">Birthday</th>
         <th scope="col">Gender</th>
@@ -41,23 +46,39 @@
     </tr>
     </thead>
     <tbody>
-    <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-        <td>@mdo</td>
-        <td>@mdo</td>
-        <td>@mdo</td>
-        <td>@mdo</td>
-        <td>@mdo</td>
-        <td><a class="btn btn-info">Show</a></td>
-        <td><a class="btn btn-warning">Edit</a></td>
-        <td><a class="btn btn-danger">Delete</a></td>
-    </tr>
+    <c:forEach items="${customers}" var="cus">
+        <tr>
+            <th scope="row">${cus.code}</th>
+            <td>${cus.name}</td>
+            <td>${cus.birthday}</td>
+            <td>${cus.gender}</td>
+            <td>${cus.idCard}</td>
+            <td>${cus.phone}</td>
+            <td>${cus.email}</td>
+            <c:forEach items="${typeCustomer}" var="a">
+              <c:if test="${a.idTypeCustomer == cus.customerTypeId}">
+                  <td>${a.nameTypeCustomer}</td>
+              </c:if>
+            </c:forEach>
+            <td>${cus.address}</td>
+            <td><a class="btn btn-info">Show</a></td>
+            <td><a class="btn btn-warning">Edit</a></td>
+            <td><a class="btn btn-danger">Delete</a></td>
+        </tr>
+    </c:forEach>
     </tbody>
 </table>
-<script src="../../bootstrapmin/jquery-3.6.0.min.js"></script>
-<script src="../../bootstrapmin/bootstrap.min.js"></script>
+<script src="/jquery/jquery-3.5.1.min.js"></script>
+<script src="/datatables/js/jquery.dataTables.min.js"></script>
+<script src="/datatables/js/dataTables.bootstrap4.min.js"></script>
 </body>
+<script>
+    $(document).ready(function() {
+    $('#tableCustomer').dataTable( {
+    "dom": 'lrtip',
+    "lengthChange": false,
+    "pageLength": 2
+    } );
+    } );
+</script>
 </html>

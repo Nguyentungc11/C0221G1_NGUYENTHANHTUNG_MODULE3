@@ -11,7 +11,7 @@
 <html>
 <head>
     <title>Title</title>
-    <link rel="stylesheet" href="../../bootstrapmin/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/bootstrap.css"/>
 
 </head>
 <body>
@@ -19,56 +19,66 @@
 <div class="container">
     <form action="/customers?action=create" method="post">
         <div class="form-group row">
-            <label for="ipname" class="col-sm-2 col-form-label">Name</label>
+            <label for="code" class="col-sm-2 col-form-label" >Code</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control-plaintext" id="ipname">
+                <input type="text" class="form-control-plaintext" name ="code" id="code">
             </div>
         </div>
         <div class="form-group row">
-            <label for="ipday" class="col-sm-2 col-form-label">Birthday</label>
+            <label for="name" class="col-sm-2 col-form-label" >Name</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control-plaintext" id="ipday">
+                <input type="text" class="form-control-plaintext" name ="name" id="name">
             </div>
         </div>
         <div class="form-group row">
-            <label for="ipname1" class="col-sm-2 col-form-label">Gender</label>
+            <label for="birthday" class="col-sm-2 col-form-label">Birthday</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control-plaintext" id="ipname1">
+                <input type="text" class="form-control-plaintext" name="birthday" id="birthday">
             </div>
         </div>
         <div class="form-group row">
-            <label for="ipname2" class="col-sm-2 col-form-label">Id Card</label>
+            <label for="gender" class="col-sm-2 col-form-label">Gender</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control-plaintext" id="ipname2">
+                <input type="text" class="form-control-plaintext" name="gender" id="gender">
             </div>
         </div>
         <div class="form-group row">
-            <label for="ipname3" class="col-sm-2 col-form-label">Phone</label>
+            <label for="idcard" class="col-sm-2 col-form-label">Id Card</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control-plaintext" id="ipname3">
+                <input type="text" class="form-control-plaintext" name="idcard" id="idcard">
             </div>
         </div>
         <div class="form-group row">
-            <label for="ipname4" class="col-sm-2 col-form-label">Email</label>
+            <label for="phone" class="col-sm-2 col-form-label">Phone</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control-plaintext" id="ipname4">
+                <input type="text" class="form-control-plaintext" name="phone" id="phone">
             </div>
         </div>
         <div class="form-group row">
-            <label for="ipname5" class="col-sm-2 col-form-label">Type of customer</label>
+            <label for="email" class="col-sm-2 col-form-label">Email</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control-plaintext" id="ipname5">
+                <input type="text" class="form-control-plaintext" name="email" id="email">
             </div>
         </div>
         <div class="form-group row">
-            <label for="ipname6" class="col-sm-2 col-form-label">Address</label>
+            <label  class="col-sm-2 col-form-label">Type of customer</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control-plaintext" id="ipname6">
+                <select name="typeCustomer">
+                    <c:forEach items="${typeCustomerList}" var="a">
+                        <option value="${a.idTypeCustomer}">${a.nameTypeCustomer}</option>
+                    </c:forEach>
+                </select>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="address" class="col-sm-2 col-form-label">Address</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control-plaintext" name="address" id="address">
             </div>
         </div>
         <div class="d-flex justify-content-around">
             <a class="btn btn-secondary">Back to list customer</a>
-            <a class="btn btn-success">Create</a>
+            <button type="submit" class="btn btn-success">Create</button>
         </div>
 
     </form>

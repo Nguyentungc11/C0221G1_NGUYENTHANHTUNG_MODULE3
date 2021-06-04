@@ -28,7 +28,7 @@
                     <a class="nav-link active" aria-current="page" href="#">Employee</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/view/customer/list.jsp">Customer</a>
+                    <a class="nav-link" href="/customers">Customer</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Service</a>
